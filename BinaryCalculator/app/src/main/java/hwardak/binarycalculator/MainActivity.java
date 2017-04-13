@@ -1,3 +1,5 @@
+//Hasib Wardak 
+
 package hwardak.binarycalculator;
 
 import android.content.Context;
