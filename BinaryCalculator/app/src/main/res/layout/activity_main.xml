@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="hwardak.binarycalculator.MainActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/faded"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="2"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="60sp"
+                android:layout_height="match_parent"
+                android:text="Dec: "
+                android:gravity="center"
+                android:textSize="25sp"
+                android:id="@+id/decTitleTextView"
+                android:background="@color/decBlue"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/DecEditText"
+                android:hint="..."
+                android:onClick="decimalOnClick"
+                android:gravity="center"
+                android:textSize="25sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="60sp"
+                android:layout_height="match_parent"
+                android:text="Bin: "
+                android:gravity="center"
+                android:textSize="25sp"
+                android:id="@+id/binTitleTextView"
+                android:background="@color/binBlue"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/BinaryEditText"
+                android:hint="..."
+                android:onClick="binaryOnClick"
+                android:gravity="center"
+                android:textSize="25sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="60sp"
+                android:layout_height="match_parent"
+                android:text="Oct: "
+                android:gravity="center"
+                android:textSize="25sp"
+                android:id="@+id/octTitleTextView"
+                android:background="@color/octBlue"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:id="@+id/OctalEditText"
+                android:hint="..."
+                android:onClick="octalOnClick"
+                android:gravity="center"
+                android:textSize="25sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="60sp"
+                android:layout_height="match_parent"
+                android:text="Hex: "
+                android:gravity="center"
+                android:textSize="25sp"
+                android:id="@+id/hexTitleTextView"
+                android:background="@color/hexBlue"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/HexEditText"
+                android:hint="..."
+                android:onClick="hexOnClick"
+                android:inputType=""
+                android:gravity="center"
+                android:textSize="25sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <TextView
+                android:layout_width="60sp"
+                android:layout_height="match_parent"
+                android:text="iEEE: "
+                android:gravity="center"
+                android:textSize="25sp"
+                android:id="@+id/iEEETitleTextView"
+                android:background="@color/iEEE"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/iEEEEditText"
+                android:hint="..."
+                android:onClick="iEEEOnClick"
+                android:inputType=""
+                android:gravity="center"
+                android:textSize="25sp"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:background="@color/colorPrimaryDark"
+        >
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:id="@+id/binaryKeyboardLayout"
+            >
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                layout="@layout/binary_keyboard"
+
+                />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:id="@+id/decimalKeyboardLayout"
+            >
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                layout="@layout/decimal_keyboard"
+
+                />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:id="@+id/octalKeyboardLayout"
+            >
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                layout="@layout/octal_keyboard"
+
+                />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:id="@+id/hexKeyboardLayout"
+            >
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                layout="@layout/hex_keyboard"
+
+                />
+        </FrameLayout>
+
+    </FrameLayout>
+
+</LinearLayout>

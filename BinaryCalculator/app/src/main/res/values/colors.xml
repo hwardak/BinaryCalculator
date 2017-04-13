@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#020f64</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="decBlue">#ffeb3b</color>
+    <color name="binBlue">#17dd2b</color>
+    <color name="octBlue">#f04b69ff</color>
+    <color name="hexBlue">#f0f7a129</color>
+    <color name="iEEE">#f0f5201c</color>
+
+    <color name="keyboardFrameBlue">#f07099f4</color>
+
+    <color name="viewSelected">#f0ced9ed</color>
+</resources>

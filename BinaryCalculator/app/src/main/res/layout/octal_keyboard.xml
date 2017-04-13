@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    >
+
+
+
+    <LinearLayout
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        >
+
+
+        <Button
+            android:layout_width="90dp"
+            android:layout_height="70dp"
+            android:text="1"
+            android:id="@+id/hexButton7"
+            android:onClick="inputChar"/>
+
+        <Button
+
+            android:layout_width="90dp"
+            android:layout_height="70dp"
+            android:text="2"
+            android:id="@+id/octButton8"
+            android:onClick="inputChar"/>
+
+
+
+        <Button
+            android:layout_width="90dp"
+            android:layout_height="70dp"
+            android:text="3"
+            android:id="@+id/octButton9"
+            android:onClick="inputChar"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:layout_width="90dp"
+            android:layout_height="70dp"
+            android:text="4"
+            android:id="@+id/octButton4"
+            android:onClick="inputChar"/>
+
+
+
+
+        <Button
+            android:layout_width="90dp"
+            android:layout_height="70dp"
+            android:text="5"
+            android:id="@+id/octButton5"
+            android:onClick="inputChar"/>
+        <!-- android:background="@drawable/roundbutton" -->
+
+
+        <Button
+            android:layout_width="90dp"
+            android:layout_height="70dp"
+            android:text="6"
+            android:id="@+id/octButton6"
+            android:onClick="inputChar"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:layout_width="90dp"
+            android:layout_height="70dp"
+            android:text="7"
+            android:id="@+id/octButton1"
+            android:onClick="inputChar"/>
+        <!-- android:background="@drawable/roundbutton" -->
+
+
+        <Button
+            android:layout_width="90dp"
+            android:layout_height="70dp"
+            android:text="8"
+            android:id="@+id/octButton2"
+            android:onClick="inputChar"
+            android:visibility="invisible"
+            android:enabled="false"
+            />
+
+
+        <Button
+            android:layout_width="90dp"
+            android:layout_height="70dp"
+            android:text="9"
+            android:id="@+id/octButton3"
+            android:onClick="inputChar"
+            android:visibility="invisible"
+            android:enabled="false"
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:layout_width="90dp"
+            android:layout_height="70dp"
+            android:text="spare"
+            android:id="@+id/octSpareButton"
+            android:onClick="inputChar"
+            android:visibility="invisible"
+            android:enabled="false"
+            />
+
+        <Button
+            android:layout_width="90dp"
+            android:layout_height="70dp"
+            android:text="0"
+            android:id="@+id/octButton0"
+            android:onClick="inputChar"/>
+
+        <Button
+            android:layout_width="90dp"
+            android:layout_height="70dp"
+            android:text="Del"
+            android:id="@+id/octalDeleteButton"
+            android:onClick="deleteChar"
+            android:visibility="visible"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>
