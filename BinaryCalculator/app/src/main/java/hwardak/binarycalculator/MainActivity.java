@@ -32,6 +32,9 @@ public class MainActivity extends AppCompatActivity {
     Button decimalDeleteButton;
     Button octalDeleteButton;
     Button hexDeleteButton;
+    //added this
+    Button binaryOneKey;
+    Button binaryZeroKey;
 
     FrameLayout binaryKeyboardLayout;// = (FrameLayout) findViewById(R.id.binaryKeyboardLayout);
     FrameLayout decimalKeyboardLayout;// = (FrameLayout) findViewById(R.id.decimalKeyboardLayout);
@@ -61,6 +64,10 @@ public class MainActivity extends AppCompatActivity {
         binaryDeleteButton = (Button) findViewById(R.id.binaryDeleteButton);
         octalDeleteButton = (Button) findViewById(R.id.octalDeleteButton);
         hexDeleteButton = (Button) findViewById(R.id.hexDeleteButton);
+        //added this
+        binaryOneKey = (Button) findViewById(R.id.binaryOneKey);
+        binaryZeroKey = (Button) findViewById(R.id.binaryZeroKey);
+
 
 
         inputMethodManager = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
@@ -293,32 +300,101 @@ public class MainActivity extends AppCompatActivity {
             convertFromIEEE(s);
         }
     }
-
     private void convertFromIEEE(String s) {
-        s = s.replaceAll(" - ", "");
-        if(s.length() < 32){
-            String dashes = "";
-            for(int i = 32 - s.length(); i > 0; i--){
-                dashes += " - ";
-            }
-            iEEETextView.setText(s + dashes);
+        //testing stuff
+
+        /**
+        String num = "00111111100000000000000000000000";
+        int test = Integer.parseInt(num,2);
+        int test1 = (int)Float.intBitsToFloat(test);
+        Log.d("ieee",test + " number: " +test);
+        Log.d("decimal",test + " number: " +test1);
+        Log.d("binary",test + " number: " +Integer.toBinaryString(test));
+        Log.d("octal",test + " number: " +Integer.toOctalString(test));
+        Log.d("hex",test + " number: " +Integer.toHexString(test));
+         */
+        binaryZeroKey.setEnabled(true);
+        binaryOneKey.setEnabled(true);
+        if(s.length() == 32) {
+            //disabling the buttons so user cant add more numbers
+            binaryZeroKey.setEnabled(false);
+            binaryOneKey.setEnabled(false);
+            s = s.replaceAll(" - ", "");
+            int bits= Integer.parseInt(s, 2);
+            int number = (int)Float.intBitsToFloat(bits);
+            //testing
+            /**
+             Log.d("test1",s + " number: " +number);
+             Toast.makeText(getApplicationContext(),s,Toast.LENGTH_SHORT).show();
+             Log.d("test2",s);
+             Toast.makeText(getApplicationContext(),Integer.toString(number),Toast.LENGTH_SHORT).show();
+             */
+            iEEETextView.setText(s);
+            binTextView.setText(Integer.toBinaryString(bits));
+            octTextView.setText(Integer.toOctalString(bits));
+            hexTextView.setText(Integer.toHexString(bits));
+            //decTextView.setText(Float.floatToIntBits(bits));
+            decTextView.setText(Integer.toString(number));
+        }
+        else {
+//            binaryZeroKey.setEnabled(true);
+//            binaryOneKey.setEnabled(true);
+            iEEETextView.setText(s);
 
             binTextView.setText("");
             hexTextView.setText("");
             octTextView.setText("");
-//            iEEETextView.setText("");
-
-
-        } else {
-            s = s.replaceAll(" - ", "");
-
-            int bits= Integer.parseInt(s, 2);
-            iEEETextView.setText(s);
-            binTextView.setText(Integer.toBinaryString(bits));
-            octTextView.setText(Integer.toOctalString(bits));
-            decTextView.setText(Float.floatToIntBits(bits));
-
         }
+        //TODO: gotta change this logic - seems to be crashing the delete i believe
+        /**
+        s = s.replaceAll(" - ", "");
+
+           if(s.length() == 32) {
+            //disabling the buttons so user cant add more numbers
+            binaryZeroKey.setEnabled(false);
+            binaryOneKey.setEnabled(false);
+            s = s.replaceAll(" - ", "");
+            int bits= Integer.parseInt(s, 2);
+            int number = (int)Float.intBitsToFloat(bits);
+            //testing
+            /**
+            Log.d("test1",s + " number: " +number);
+            Toast.makeText(getApplicationContext(),s,Toast.LENGTH_SHORT).show();
+            Log.d("test2",s);
+            Toast.makeText(getApplicationContext(),Integer.toString(number),Toast.LENGTH_SHORT).show();
+             */
+//            iEEETextView.setText(s);
+//            binTextView.setText(Integer.toBinaryString(bits));
+//            octTextView.setText(Integer.toOctalString(bits));
+//            hexTextView.setText(Integer.toHexString(bits));
+//            //decTextView.setText(Float.floatToIntBits(bits));
+//            decTextView.setText(Integer.toString(number));
+       // }
+//        if(s.length() < 32){
+//            //re-enabling the buttons
+//            binaryZeroKey.setEnabled(true);
+//            binaryOneKey.setEnabled(true);
+//            String dashes = "";
+//            for(int i = 32 - s.length(); i > 0; i--){
+//                dashes += " - ";
+//            }
+//            iEEETextView.setText(s + dashes);
+//
+//            binTextView.setText("");
+//            hexTextView.setText("");
+//            octTextView.setText("");
+
+//            iEEETextView.setText("");
+            //testing
+            /**
+            Log.d("test",s);
+            Log.d("count",Integer.toString(s.length()));
+             */
+
+
+
+       // }
+
     }
 
     private boolean convertFromHex(String s) {
