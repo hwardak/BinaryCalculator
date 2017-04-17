@@ -154,7 +154,6 @@ public class MainActivity extends AppCompatActivity {
         } else {
             hexDeleteButton.setEnabled(false);
         }
-
     }
 
 
@@ -169,7 +168,6 @@ public class MainActivity extends AppCompatActivity {
         } else {
             octalDeleteButton.setEnabled(false);
         }
-
     }
 
     public void binaryOnClick(View view) {
@@ -183,13 +181,10 @@ public class MainActivity extends AppCompatActivity {
         } else {
             binaryDeleteButton.setEnabled(false);
         }
-
-
     }
 
     private void surpressSoftKeyboard(View view){
         inputMethodManager.hideSoftInputFromWindow(view.getWindowToken(), 0);
-
     }
 
     public void decimalOnClick(View view) {
@@ -204,8 +199,6 @@ public class MainActivity extends AppCompatActivity {
         } else {
             decimalDeleteButton.setEnabled(false);
         }
-
-
     }
 
     private void resetBackgroundColors(){
@@ -214,7 +207,6 @@ public class MainActivity extends AppCompatActivity {
         octTextView.setBackgroundColor(getResources().getColor(R.color.octBlue));
         hexTextView.setBackgroundColor(getResources().getColor(R.color.hexBlue));
         iEEETextView.setBackgroundColor(getResources().getColor((R.color.iEEE)));
-
     }
 
 
@@ -279,8 +271,6 @@ public class MainActivity extends AppCompatActivity {
         else if(focusedTextView == iEEETextView){
 
         }
-
-
     }
 
     private void sortForConversion(String s){
@@ -593,7 +583,6 @@ public class MainActivity extends AppCompatActivity {
 
         }
         return false;
-
     }
 
 
