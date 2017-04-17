@@ -322,6 +322,7 @@ public class MainActivity extends AppCompatActivity {
             s = s.replaceAll(" - ", "");
             int bits= Integer.parseInt(s, 2);
             int number = (int)Float.intBitsToFloat(bits);
+
             //testing
             /**
              Log.d("test1",s + " number: " +number);
@@ -340,7 +341,7 @@ public class MainActivity extends AppCompatActivity {
 //            binaryZeroKey.setEnabled(true);
 //            binaryOneKey.setEnabled(true);
             iEEETextView.setText(s);
-
+            decTextView.setText("");
             binTextView.setText("");
             hexTextView.setText("");
             octTextView.setText("");
@@ -403,19 +404,38 @@ public class MainActivity extends AppCompatActivity {
                 s = s.toLowerCase();
                 long orignalValue = Long.parseLong(s,16);
                 int intBits = Float.floatToIntBits(orignalValue);
-
+               // Log.d("number",Integer.toString(intBits));
                 if(Long.toBinaryString(orignalValue).length() > 30){
                     binTextView.setTextSize(15);
                 } else {
                     binTextView.setTextSize(25);
                 }
+                //testing
+                int testfloat = Float.floatToIntBits(orignalValue);
+                String integer1 = Integer.toBinaryString(testfloat);
+                StringBuilder test = new StringBuilder("00000000000000000000000000000000");
+//                test.delete(test.length() - integer1.length(), test.length());
+//                test.append(integer1);
+                test.replace(test.length() - integer1.length(), test.length(), integer1);
+                 Log.d("number",test.toString());
 
-                if(orignalValue > 0) {
-                    iEEETextView.setText("0" + Integer.toBinaryString(intBits));
-                } else {
-                    iEEETextView.setText(Integer.toBinaryString(intBits));
+                iEEETextView.setText(test);
 
-                }
+
+
+//                if(orignalValue > 0) {
+//                    String ieeNum = Integer.toBinaryString(intBits);
+//                    StringBuilder test = new StringBuilder("00000000000000000000000000000000");
+//                    Log.d("number",test.toString());
+//                    //test.append("00000000000000000000000000000000");
+//                    test.replace(0,ieeNum.length(),ieeNum);
+//                    Log.d("number",test.toString());
+//                    iEEETextView.setText("0" + Integer.toBinaryString(intBits));
+//                }
+//                } else {
+//                    iEEETextView.setText(Integer.toBinaryString(intBits));
+//
+//                }
 
                 binTextView.setText(Long.toBinaryString(orignalValue));
                 octTextView.setText(Long.toOctalString(orignalValue));
@@ -446,13 +466,22 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     binTextView.setTextSize(25);
                 }
+                //testing
+                int testfloat = Float.floatToIntBits(orignalValue);
+                String integer1 = Integer.toBinaryString(testfloat);
+                StringBuilder test = new StringBuilder("00000000000000000000000000000000");
+//                test.delete(test.length() - integer1.length(), test.length());
+//                test.append(integer1);
+                test.replace(test.length() - integer1.length(), test.length(), integer1);
+                Log.d("number",test.toString() + " length: "+test.length());
 
-                if(orignalValue > 0) {
-                    iEEETextView.setText("0" + Integer.toBinaryString(intBits));
-                } else {
-                    iEEETextView.setText(Integer.toBinaryString(intBits));
-
-                }
+                iEEETextView.setText(test);
+//                if(orignalValue > 0) {
+//                    iEEETextView.setText("0" + Integer.toBinaryString(intBits));
+//                } else {
+//                    iEEETextView.setText(Integer.toBinaryString(intBits));
+//
+//                }
 
                 binTextView.setText(Long.toBinaryString(orignalValue));
                 hexTextView.setText(Long.toHexString(orignalValue));
@@ -478,12 +507,22 @@ public class MainActivity extends AppCompatActivity {
                 long orignalValue = Long.parseLong(s);
                 int intBits = Float.floatToIntBits(orignalValue);
 
-                if(orignalValue > 0) {
-                    iEEETextView.setText("0" + Integer.toBinaryString(intBits));
-                } else {
-                    iEEETextView.setText(Integer.toBinaryString(intBits));
+                //testing
+                int testfloat = Float.floatToIntBits(orignalValue);
+                String integer1 = Integer.toBinaryString(testfloat);
+                StringBuilder test = new StringBuilder("00000000000000000000000000000000");
+//                test.delete(test.length() - integer1.length(), test.length());
+//                test.append(integer1);
+                test.replace(test.length() - integer1.length(), test.length(), integer1);
+                Log.d("number",test.toString() + " length: "+test.length());
 
-                }
+                iEEETextView.setText(test);
+//                if(orignalValue > 0) {
+//                    iEEETextView.setText("0" + Integer.toBinaryString(intBits));
+//                } else {
+//                    iEEETextView.setText(Integer.toBinaryString(intBits));
+//
+//                }
 
                 if(Long.toBinaryString(orignalValue).length() > 30){
                     binTextView.setTextSize(15);
@@ -521,13 +560,22 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     binTextView.setTextSize(25);
                 }
+                //testing
+                int testfloat = Float.floatToIntBits(orignalValue);
+                String integer1 = Integer.toBinaryString(testfloat);
+                StringBuilder test = new StringBuilder("00000000000000000000000000000000");
+//                test.delete(test.length() - integer1.length(), test.length());
+//                test.append(integer1);
+                test.replace(test.length() - integer1.length(), test.length(), integer1);
+                Log.d("number",test.toString() + " length: "+test.length());
 
-                if(orignalValue > 0) {
-                    iEEETextView.setText("0" + Integer.toBinaryString(intBits));
-                } else {
-                    iEEETextView.setText(Integer.toBinaryString(intBits));
-
-                }
+                iEEETextView.setText(test);
+//                if(orignalValue > 0) {
+//                    iEEETextView.setText("0" + Integer.toBinaryString(intBits));
+//                } else {
+//                    iEEETextView.setText(Integer.toBinaryString(intBits));
+//
+//                }
 
                 decTextView.setText(Long.toString(orignalValue));
                 hexTextView.setText(Long.toHexString(orignalValue));
