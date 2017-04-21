@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
     Button octalDeleteButton;
     Button hexDeleteButton;
     //added this
+    //But why?
     Button binaryOneKey;
     Button binaryZeroKey;
 
@@ -379,9 +380,6 @@ public class MainActivity extends AppCompatActivity {
             Log.d("test",s);
             Log.d("count",Integer.toString(s.length()));
              */
-
-
-
        // }
 
     }
@@ -523,7 +521,6 @@ public class MainActivity extends AppCompatActivity {
         return false;
     }
 
-
     private boolean convertFromBinary(String s) {
         if(!s.equals("")) {
             try {
@@ -565,14 +562,12 @@ public class MainActivity extends AppCompatActivity {
         return false;
     }
 
-
     public void positiveNegativeOnClick(View view) {
         if(Integer.parseInt(focusedTextView.getText().toString()) > 0 ){
             focusedTextView.setText("-" + focusedTextView.getText().toString());
         } else {
             focusedTextView.setText(focusedTextView.getText().toString().substring(1));
         }
-
         sortForConversion(focusedTextView.getText().toString());
     }
 }
