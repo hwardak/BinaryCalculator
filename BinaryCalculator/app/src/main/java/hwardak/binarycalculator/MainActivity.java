@@ -36,8 +36,8 @@ public class MainActivity extends AppCompatActivity {
     Button binaryOneKey;
     Button binaryZeroKey;
 
-    FrameLayout binaryKeyboardLayout;// = (FrameLayout) findViewById(R.id.binaryKeyboardLayout);
-    FrameLayout decimalKeyboardLayout;// = (FrameLayout) findViewById(R.id.decimalKeyboardLayout);
+    FrameLayout binaryKeyboardLayout;
+    FrameLayout decimalKeyboardLayout;
     FrameLayout octalKeyboardLayout;
     FrameLayout hexKeyboardLayout;
 
@@ -324,12 +324,10 @@ public class MainActivity extends AppCompatActivity {
             binTextView.setText(Integer.toBinaryString(bits));
             octTextView.setText(Integer.toOctalString(bits));
             hexTextView.setText(Integer.toHexString(bits));
-            //decTextView.setText(Float.floatToIntBits(bits));
             decTextView.setText(Integer.toString(number));
         }
         else {
-//            binaryZeroKey.setEnabled(true);
-//            binaryOneKey.setEnabled(true);
+
             iEEETextView.setText(s);
             decTextView.setText("");
             binTextView.setText("");
