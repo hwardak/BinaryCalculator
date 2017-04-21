@@ -411,8 +411,6 @@ public class MainActivity extends AppCompatActivity {
 
                 iEEETextView.setText(test);
 
-
-
 //                if(orignalValue > 0) {
 //                    String ieeNum = Integer.toBinaryString(intBits);
 //                    StringBuilder test = new StringBuilder("00000000000000000000000000000000");
@@ -466,12 +464,7 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("number",test.toString() + " length: "+test.length());
 
                 iEEETextView.setText(test);
-//                if(orignalValue > 0) {
-//                    iEEETextView.setText("0" + Integer.toBinaryString(intBits));
-//                } else {
-//                    iEEETextView.setText(Integer.toBinaryString(intBits));
-//
-//                }
+
 
                 binTextView.setText(Long.toBinaryString(orignalValue));
                 hexTextView.setText(Long.toHexString(orignalValue));
@@ -507,12 +500,6 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("number",test.toString() + " length: "+test.length());
 
                 iEEETextView.setText(test);
-//                if(orignalValue > 0) {
-//                    iEEETextView.setText("0" + Integer.toBinaryString(intBits));
-//                } else {
-//                    iEEETextView.setText(Integer.toBinaryString(intBits));
-//
-//                }
 
                 if(Long.toBinaryString(orignalValue).length() > 30){
                     binTextView.setTextSize(15);
@@ -560,12 +547,7 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("number",test.toString() + " length: "+test.length());
 
                 iEEETextView.setText(test);
-//                if(orignalValue > 0) {
-//                    iEEETextView.setText("0" + Integer.toBinaryString(intBits));
-//                } else {
-//                    iEEETextView.setText(Integer.toBinaryString(intBits));
-//
-//                }
+
 
                 decTextView.setText(Long.toString(orignalValue));
                 hexTextView.setText(Long.toHexString(orignalValue));
